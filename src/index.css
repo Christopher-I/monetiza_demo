@@ -1,0 +1,248 @@
+@import './styles/fonts.css';
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+@import "@flaticon/flaticon-uicons/css/all/all";
+@import '@fortawesome/fontawesome-free/css/all.min.css';
+@import url('https://fonts.googleapis.com/css2?family=Afacad&display=swap');
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+	* {
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+	}
+
+	html {
+		/* font-size: 62.5%; */
+		scroll-behavior: smooth;
+	}
+
+	body {
+		font-family: var(--futura);
+		overflow-x: hidden;
+
+	}
+
+	a {
+		color: var(--black-color);
+		text-decoration: inherit;
+	}
+
+	/* button {
+		border-radius: 8px;
+		border: 1px solid transparent;
+		padding: 0.6em 1.2em;
+		font-size: 1em;
+		font-weight: 500;
+		font-family: inherit;
+		background-color: #1a1a1a;
+		cursor: pointer;
+		transition: border-color 0.25s;
+	} */
+
+	ul {
+		list-style: none;
+	}
+
+	.section {
+		padding: 5rem 0;
+		margin-bottom: 5rem;
+	}
+
+	p {
+		font-family: var(--futura), sans-serif;
+		font-size: 1.6rem;
+	}
+
+	a {
+		color: var(--black-color);
+		text-decoration: none;
+	}
+
+	a:hover {
+		color: var(--main-color);
+	}
+
+	::placeholder {
+		font-family: 'Montserrat', sans-serif;
+	  }
+
+	:focus {
+		outline: none;
+	}
+
+	::selection {
+		background: var(--main-color);
+		color: var(--white-color);
+	}
+
+	.btn-bg-active {
+		background-color: var(--main-color);
+		box-shadow: 3px 4px 4px 0px #0000004D;
+	}
+
+	.navlink {
+		font-family: var(--futura-medium);
+		font-size: 18px;
+	}
+
+	.navlink.active>button {
+		background-color: var(--main-color);
+		box-shadow: 3px 4px 4px 0px #0000004D;
+		color: var(--white-color);
+	}
+
+	.hero-text-colored,
+	.text-colored {
+		color: var(--main-color);
+	}
+	.border-colored {
+		border: 1px solid var(--main-color);
+	}
+
+	.hero-cta {
+		line-height: 85px !important;
+	}
+
+	.futura-bd {
+		font-family: var(--futura-medium) !important;
+	}
+
+	.futura-italic {
+		font-family: var(--futura-italic);
+	}
+
+	section {
+		@apply py-4 px-[5vw] md:px-[7vw] lg:px-[10vw];
+	}
+	.input-icon {
+		position: relative;
+		top: 50%;
+		transform: translateY(-50%);
+		right: 1px; /* Adjust based on your design */
+		color: #6b7280; /* Tailwind's gray-500 */
+		font-size: 1.25rem; /* Tailwind's text-lg */
+		pointer-events: none; /* Prevent interaction */
+	  }
+	  
+	  .input-box {
+		position: absolute; /* Parent container for input and icon */
+		display: flex;
+		align-items: center;
+	  }
+
+	
+
+	
+
+	
+}
+
+:root {
+	font-synthesis: none;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+
+	--main-color: hsl(25, 99%, 45%);
+	--sub-color: #aa12ff;
+	--gray-color: #C5BABA;
+	--bg-color: #F8FAFC;
+	--white-color: #ffffff;
+	--black-color: #000000;
+	--page-shadow: 1.75rem 2rem 2.5rem rgba(156, 156, 156, 0.25);
+	--gradient: linear-gradient(to right, #11998e, #38ef7d);
+
+	--futura: "Futura-Bk";
+	--futura-medium: "Futura-Medium";
+	--futura-bold: "Futura-Bold";
+	--futura-italic: "Futura-Italic";
+
+	--border-color: #807E7E;
+	--sidebar-text-color: #807E7E;
+}
+
+/* For Chrome, Safari, Edge, and other WebKit-based browsers */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none; /* Disable the spin buttons */
+  margin: 0; /* Remove extra margin if needed */
+}
+
+/* For Firefox */
+input[type="number"] {
+  -moz-appearance: textfield; /* Treat it like a text field */
+}
+
+/* Hide scrollbar but keep scrolling */
+.hide-scrollbar::-webkit-scrollbar {
+	display: none; /* For Chrome, Safari, and Edge */
+  }
+  .hide-scrollbar {
+	-ms-overflow-style: none; /* For Internet Explorer and Edge */
+	scrollbar-width: none; /* For Firefox */
+	padding-bottom: 70px;
+  }
+
+  .skiptranslate {
+	display: none !important;
+	height: 0px !important;
+  }
+
+body {
+	top: 0 !important;
+}
+
+.overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 0%;
+	height: 100%;
+	background-color: white;
+	opacity: 1;
+	/* animation: fillEffect 30s linear forwards; */
+}
+
+@keyframes fillEffect {
+	0% {
+		width: 0%;
+		opacity: 0.5;
+	}
+	100% {
+		width: 100%;
+		opacity: 1;
+	}
+}
+
+/* Animations for sliding */
+.slide-left {
+	animation: slideLeft 0.3s ease-in-out;
+  }
+  
+  .slide-right {
+	animation: slideRight 0.3s ease-in-out;
+  }
+  
+  @keyframes slideLeft {
+	from {
+	  transform: translateX(100%);
+	}
+	to {
+	  transform: translateX(0);
+	}
+  }
+  
+  @keyframes slideRight {
+	from {
+	  transform: translateX(-100%);
+	}
+	to {
+	  transform: translateX(0);
+	}
+  }
+  

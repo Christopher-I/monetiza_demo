@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/logo.png" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/twemoji.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Monetiza+</title>
+  <style>
+    .hide-scrollbar::-webkit-scrollbar {
+      display: none; /* For Chrome, Safari, and Edge */
+    }
+    .hide-scrollbar {
+      -ms-overflow-style: none; /* For Internet Explorer and Edge */
+      scrollbar-width: none; /* For Firefox */
+    }
+  </style>
+</head>
+
+<body style="overflow-y: hidden;">
+<!-- <body class="hide-scrollbar"> -->
+  <div id="root"></div>
+  <!-- <div id="google_translate_element" style="margin-top: 20px;"></div> -->
+  <script type="module" src="/src/main.jsx"></script>
+  <script
+    src="https://www.paypal.com/sdk/js?client-id=AW3W5IdhgloMppTEC9HGomDXAbP_gjMexp7G9EUAo4ihh2aie_VTITKcsfdHM2SfRB3wGpy4k1sm78kO&currency=USD"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/twemoji.min.js"></script>
+  <script>
+    window.onload = function () {
+      twemoji.parse(document.body); // Converts all emojis
+    };
+  </script>
+</body>
+
+</html>

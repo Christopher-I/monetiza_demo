@@ -1,0 +1,21 @@
+/* Web Fonts included in the site */
+@font-face {
+    font-family: "Futura-Bk";
+    src: url("/frontend/public/fonts/futubk.ttf");
+  }
+  
+  @font-face {
+    font-family: "Futura-Medium";
+    src: url("/frontend/public/fonts/futura-medium.ttf");
+  }
+  
+  @font-face {
+    font-family: "Futura-Bold";
+    src: url("/frontend/public/fonts/futurabook-bt.ttf");
+  }
+
+  @font-face {
+    font-family: "Futura-Italic";
+    src: url("/frontend/public/fonts/futurabook-italic-bt.ttf");
+  }
+  
